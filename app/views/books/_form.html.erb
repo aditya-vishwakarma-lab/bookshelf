@@ -1,0 +1,56 @@
+
+<%= form_with class:"container" ,model: book do |form|  %>
+  <div class="mb-3">
+    <%= form.label :title ,class:"form-label"%>
+    <%= form.text_field :title ,class:"form-control" ,placeholder:"Enter the Book Name here"%>
+    <% book.errors.full_messages_for(:title).each do |message| %>
+      <div class="form-text"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :author ,class:"form-label"%>
+    <%= form.text_field :author ,class:"form-control" ,placeholder:"Enter the Books Author Name here"%>
+    <% book.errors.full_messages_for(:author).each do |message| %>
+      <div class="form-text"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :isbn ,class:"form-label"%>
+    <%= form.text_field :isbn ,class:"form-control" ,placeholder:"Enter the isbn code of the book here"%>
+    <% book.errors.full_messages_for(:isbn).each do |message| %>
+      <div class="form-text"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :description ,class:"form-label"%>
+    <%= form.text_field :description ,class:"form-control" ,placeholder:"Describe the book here"%>
+    <% book.errors.full_messages_for(:description).each do |message| %>
+      <div class="form-text"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :language ,class:"form-label"%>
+    <%= form.text_field :language ,class:"form-control" ,placeholder:"Enter the language of the book here"%>
+    <% book.errors.full_messages_for(:language).each do |message| %>
+      <div class="form-text"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :cover ,class:"form-label"%>
+    <%= form.text_field :cover ,class:"form-control" ,placeholder:"Enter the Book Cover link here"%>
+    <% book.errors.full_messages_for(:cover).each do |message| %>
+      <div class="form-text"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div >
+
+    <%= form.submit class: "btn btn-outline-secondary"%>
+  </div>
+<% end %>
+
